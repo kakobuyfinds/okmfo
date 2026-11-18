@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="Browse the SuperBuy spreadsheet, filter HipobuyFind listings by category, compare CNY prices, and check sizing, QC photos, and shipping before ordering.">
+<title>SuperBuy spreadsheet | Product Finder &amp; QC Checklist</title>
+<style>
+:root{color-scheme:light;--ink:#172e24;--green:#1c593f;--paper:#f7f6ee;--line:#d9dfd3}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 "Instrument Sans",system-ui,sans-serif}a{color:var(--green)}a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #a66a19;outline-offset:3px}
+.wrap{width:min(68rem,calc(100% - 2rem));margin-inline:auto}nav{display:flex;justify-content:center;gap:1.5rem;padding:1rem}.hero{text-align:center;padding:clamp(3rem,9vw,7rem) 1rem;background:#173d2e;color:#fff9e9}h1,h2{font-family:"Instrument Serif",Georgia,serif;line-height:1.05}h1{font-size:clamp(2.8rem,8vw,6rem);margin:0}h2{font-size:clamp(1.9rem,4vw,3rem);margin:0 0 1rem}.hero p{max-width:36rem;margin:1rem auto 1.5rem}
+.button{display:inline-block;border-radius:.35rem;background:#d9edb8;color:#173d2e;padding:.65rem 1rem;text-decoration:none;font-weight:700}.button:hover{background:#ecf8d7}section{padding:2rem 0;border-bottom:1px solid var(--line)}.filters{display:flex;flex-wrap:wrap;gap:1rem}.filters label{flex:1 1 12rem;font-weight:600}input,select{display:block;width:100%;margin-top:.3rem;padding:.6rem;background:white;color:inherit;border:1px solid #819389;border-radius:.35rem;font:inherit}table{width:100%;border-collapse:collapse;background:#fff}th,td{text-align:left;padding:.75rem;border-bottom:1px solid var(--line)}thead{background:#e5ecd9}td:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}.table-wrap{overflow-x:auto}summary{cursor:pointer;font-weight:700;padding:.5rem 0}footer{text-align:center;padding:2rem 0}
+</style>
+<link rel="canonical" href="https://kakobuyfinds.github.io/okmfo/">
+</head>
+<body>
+<nav aria-label="On this page"><a href="#catalog">Catalog</a><a href="#checklist">Order checklist</a><a href="#faq">FAQ</a></nav>
+<header class="hero">
+  <h1>SuperBuy spreadsheet</h1>
+  <p>Compare shoes, clothing, and outerwear from HipobuyFind. Check the item price, then confirm sizing and delivery costs before you buy.</p>
+  <a class="button" href="https://hipobuyfind.com/">SuperBuy spreadsheet</a>
+</header>
+<main class="wrap">
+  <section id="catalog" aria-labelledby="catalog-title">
+    <h2 id="catalog-title">Product catalog</h2>
+    <p>Selected HipobuyFind listings. Prices are catalog snapshots in Chinese yuan (CNY). Check the live listing for current prices and availability.</p>
+    <div class="filters" hidden id="filters" style="display:none">
+      <label>Search by item or ID<input id="query" type="search" placeholder="Try canvas or 148188"></label>
+      <label>Category<select id="category"><option value="">All categories</option><option>Shoes</option><option>Hoodies</option><option>T-Shirts</option><option>Jackets</option></select></label>
+    </div>
+    <p id="results" role="status"></p>
+    <div class="table-wrap">
+      <table aria-labelledby="catalog-title">
+        <thead><tr><th scope="col">Item</th><th scope="col">Category</th><th scope="col">CNY</th></tr></thead>
+        <tbody id="items">
+          <tr><td><a href="https://hipobuyfind.com/goods-148191.html">Cream Chunky Sneakers with Wide Laces</a><br><small>148191</small></td><td>Shoes</td><td>¥350.00</td></tr>
+          <tr><td><a href="https://hipobuyfind.com/goods-148188.html">Black Canvas Low-Top Sneakers with Gum Sole</a><br><small>148188</small></td><td>Shoes</td><td>¥450.00</td></tr>
+          <tr><td>Gray Hooded Hoodie<br><small>154936</small></td><td>Hoodies</td><td>¥300.00</td></tr>
+          <tr><td>Fleece-Lined Hoodie<br><small>154917</small></td><td>Hoodies</td><td>¥170.00</td></tr>
+          <tr><td>Graphic Short-Sleeve T-Shirt<br><small>154920</small></td><td>T-Shirts</td><td>¥105.00</td></tr>
+          <tr><td>Hooded Quick-Dry Jacket<br><small>154851</small></td><td>Jackets</td><td>¥157.14</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><a class="button" href="https://hipobuyfind.com/">Buy it now</a></p>
+  </section>
+  <section id="checklist">
+    <h2>Before you place an order</h2>
+    <ol>
+      <li>Search the catalog by name or item ID and open HipobuyFind to confirm the original seller link, color, size, and current price.</li>
+      <li>Compare the seller's measurements with a garment you own. For shoes, compare the size chart with your measured foot length.</li>
+      <li>Check whether your agent accepts the listing and provides warehouse quality-control photos. Review the photos and the seller's return window before approving shipment.</li>
+      <li>Budget for the item, domestic shipping, agent fees, international shipping, and any applicable import charges. Ask which parcel weight the shipping quote uses.</li>
+    </ol>
+  </section>
+  <section id="faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is a SuperBuy spreadsheet?</summary><p>It's a product shortlist used to compare listings before ordering through a shopping agent. This independent guide uses HipobuyFind catalog records.</p></details>
+    <details><summary>Can I paste a HipobuyFind URL into SuperBuy?</summary><p>Open the catalog listing to find the original marketplace URL. Check that SuperBuy accepts that seller link and the exact item before paying.</p></details>
+    <details><summary>Why can the final cost differ from the catalog price?</summary><p>Seller prices can change by size or color. The table shows item prices. Shipping, agent fees, currency conversion, and any import charges affect the total.</p></details>
+  </section>
+</main>
+<footer class="wrap">Independent product guide · Catalog source <a href="https://hipobuyfind.com/">HipobuyFind</a></footer>
+<script>
+const filters = document.querySelector('#filters');
+const query = document.querySelector('#query');
+const category = document.querySelector('#category');
+const rows = [...document.querySelector('#items').rows];
+const results = document.querySelector('#results');
+
+function updateCatalog() {
+  const term = query.value.trim().toLowerCase();
+  let count = 0;
+  for (const row of rows) {
+    const matchesText = row.cells[0].textContent.toLowerCase().includes(term);
+    const matchesCategory = !category.value || row.cells[1].textContent === category.value;
+    row.hidden = !(matchesText && matchesCategory);
+    if (!row.hidden) count++;
+  }
+  results.textContent = count ? `${count} of ${rows.length} items` : 'No matches. Try another search or category.';
+}
+
+query.addEventListener('input', updateCatalog);
+category.addEventListener('change', updateCatalog);
+filters.hidden = false;
+filters.style.removeProperty('display');
+updateCatalog();
+</script>
+<!-- Indexing status: pending a published URL and verified Google Search Console and Bing Webmaster Tools properties. -->
+</body>
+</html>
